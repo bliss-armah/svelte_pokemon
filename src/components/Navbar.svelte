@@ -6,14 +6,9 @@
   const dispatch = createEventDispatcher();
 
   let search: string = "";
-  let theme: string = "";
 
   searchText.subscribe((value: string) => {
     search = value;
-  });
-
-  themeData.subscribe((value: string) => {
-    theme = value;
   });
 
   function searchPokemon() {
@@ -33,7 +28,7 @@
       class="text-lg lg:text-2xl font-semibold font-clash cursor-pointer hidden lg:block"
     >
       Poke <span
-        class={`${theme === "pink" ? "text-[#e85382]" : theme === "blue" ? "text-[#39BADF]" : "text-[#E1A725]"}`}
+        class={`${$themeData === "pink" ? "text-[#e85382]" : $themeData === "blue" ? "text-[#39BADF]" : "text-[#E1A725]"}`}
         >book</span
       >
     </a>
@@ -76,7 +71,7 @@
     class="border-gray border rounded-full flex items-center justify-center cursor-pointer"
   >
     <div
-      class={` ${theme === "pink" ? "bg-[#e85382]" : theme === "blue" ? "bg-[#39BADF]" : "bg-[#E1A725]"} w-8 h-8 m-1 rounded-full`}
+      class={` ${$themeData === "pink" ? "bg-[#e85382]" : $themeData === "blue" ? "bg-[#39BADF]" : "bg-[#E1A725]"} w-8 h-8 m-1 rounded-full`}
     ></div>
   </div>
 </div>

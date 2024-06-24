@@ -5,9 +5,9 @@
   let option = "about";
   let theme: string = "";
 
-  themeData.subscribe((value: string) => {
-    theme = value;
-  });
+  // themeData.subscribe((value: string) => {
+  //   theme = value;
+  // });
 
   $: if (dialog && $showDetailModal) dialog.showModal();
 
